@@ -1,0 +1,113 @@
+.baner {
+	position: relative;
+	width: 100vw;
+	height: 56.25rem;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	background-image: linear-gradient(to bottom, rgba(42, 42, 42, 0), rgba(42, 42, 42, 1)), url("../img/fon-baner.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: -2;
+
+	.title-baner {
+		margin-top: 2.31rem;
+		text-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+	}
+	form {
+		margin-top: 6.63rem;
+		width: 100%;
+
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		gap: 3.75rem;
+
+		> div {
+			display: flex;
+			align-items: center;
+			gap: 2.18rem;
+
+			img {
+				width: 4.8rem;
+				height: 4.8rem;
+			}
+		}
+	}
+
+	.usor {
+		width: 65px;
+		position: absolute;
+
+		background: #2f016d;
+		box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.25);
+	}
+	.parl1 {
+		transform: rotate(-30deg);
+	}
+	.parl2 {
+		transform: rotate(30deg);
+	}
+	.usor1 {
+		height: 793.958px;
+		top: 30px;
+		left: 135px;
+	}
+	.usor2 {
+		height: 597px;
+		top: 286px;
+		left: 90px;
+	}
+	.usor3 {
+		height: 793.958px;
+		top: 30px;
+		right: 135px;
+	}
+	.usor4 {
+		height: 597px;
+		top: 286px;
+		right: 90px;
+	}
+	.eleps {
+		width: 65.125rem;
+		height: 32.1875rem;
+		flex-shrink: 0;
+
+		border-radius: 50%;
+		background: #2f016d;
+
+		position: absolute;
+		bottom: -350px;
+	}
+
+	@media (max-width: 450px) {
+		background-position: 75% 50%;
+
+		.usor,
+		.parl1,
+		.parl2,
+		.usor1,
+		.usor2,
+		.usor3,
+		.usor4 {
+			display: none;
+		}
+
+		.eleps {
+			width: 40rem;
+			height: 22rem;
+			bottom: -190px;
+		}
+
+		.title-baner {
+			font-size: 2.3rem;
+		}
+
+		.submit-form {
+			width: 268px;
+		}
+	}
+}

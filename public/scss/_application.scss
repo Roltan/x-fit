@@ -1,0 +1,79 @@
+.application {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 4.32rem;
+	padding-bottom: 2.5rem;
+	justify-content: center;
+	gap: 40px;
+	position: relative;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 2.63rem;
+		gap: 4.44rem;
+
+		input {
+			width: 34.375rem;
+		}
+		.submit-div {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: start;
+			gap: 0;
+			max-width: 31.0625rem;
+		}
+	}
+	.aplication-img {
+		position: relative;
+
+		> img:last-child {
+			position: absolute;
+			top: 0;
+			left: 0;
+			filter: blur(15px);
+			z-index: -1;
+		}
+	}
+	.aplication-fon {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: -2;
+	}
+	button {
+		width: 25rem;
+	}
+
+	@media (max-width: 450px) {
+		.aplication-img,
+		.aplication-fon {
+			display: none;
+		}
+
+		form {
+			div:not(.submit-div) {
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				gap: 10px;
+
+				input {
+					width: 200px;
+				}
+			}
+			.submit-div {
+				max-width: 325px;
+
+				button {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
