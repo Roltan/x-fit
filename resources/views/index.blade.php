@@ -18,10 +18,9 @@
 				<a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
 				<a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
 				<a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
-                <span class="Inter-text rem15">+7 (383) 312 07 43</span>
                 <div class="header--buttons">
-					<button class="button button__blue openModalBtn" data-modal="modal1">Вход</button>
-					<button class="button button__blue openModalBtn" data-modal="modal2">Регистрация</button>
+					<button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
+					<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
 				</div>
 			</nav>
 			<div class="buter" id="buter" onclick="HeaderAct()">
@@ -30,6 +29,8 @@
 				<span></span>
 			</div>
 			<div class="navMabail" id="navMabail">
+                <button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
+				<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
 				<a class="Inter-text rem15" onclick="Scroll('info-container')">О СТУДИИ</a>
 				<a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
 				<a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>

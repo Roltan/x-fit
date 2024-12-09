@@ -8,7 +8,6 @@
   src: url(../font/Inter/Inter-Regular.otf);
 }
 html {
-  width: 100vw;
   font-size: 16px;
 }
 @media (max-width: 450px) {
@@ -24,7 +23,6 @@ html {
 body {
   background: #2a2a2a;
   overflow-x: hidden;
-  width: 100vw;
 }
 
 a {
@@ -111,13 +109,14 @@ header {
   height: 150px;
   position: relative;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  padding: 0 10px;
 }
 header > nav {
   display: flex;
   align-items: center;
-  gap: 100px;
+  width: 100%;
+  justify-content: space-between;
 }
 header > nav a:hover {
   color: #98f22a;
@@ -133,9 +132,23 @@ header .navMabail {
   display: none;
   transition: 0.6s;
 }
+header .header--buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+header .openModalBtn {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 5px solid #6aac1b;
+  background: #7ae000;
+  color: #1e1e1e !important;
+  font-family: Inter;
+}
 @media (max-width: 450px) {
   header > nav a,
-  header > span {
+  header > span,
+  header .header--buttons {
     display: none;
   }
   header .buter {
@@ -169,7 +182,7 @@ header .navMabail {
     flex-direction: column;
     gap: 50px;
     position: absolute;
-    width: 100vw;
+    width: 97vw;
     height: -moz-fit-content;
     height: fit-content;
     background-color: #1f1f1f;
