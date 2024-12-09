@@ -1,81 +1,91 @@
 @font-face {
-	font-family: Inter-I;
-	src: url(../font/Inter/Inter-Italic.otf);
+    font-family: Inter-I;
+    src: url(../font/Inter/Inter-Italic.otf);
 }
 @font-face {
-	font-family: Inter;
-	src: url(../font/Inter/Inter-Regular.otf);
+    font-family: Inter;
+    src: url(../font/Inter/Inter-Regular.otf);
 }
 html {
-	width: 100vh;
-	font-size: 16px;
+    width: 100vw;
+    font-size: 16px;
 
-	@media (max-width: 450px) {
-		font-size: 10px;
-	}
+    @media (max-width: 450px) {
+        font-size: 10px;
+    }
 }
 * {
-	margin: 0;
+    margin: 0;
 }
 body {
-	background: #2a2a2a;
-	overflow-x: hidden;
-	width: 100vw;
+    background: #2a2a2a;
+    overflow-x: hidden;
+    width: 100vw;
 }
 a {
-	text-decoration: none;
-	cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
 }
 .Inter-text {
-	color: #7ae000;
-	text-align: center;
-	font-family: Inter-I;
-	font-weight: 700;
-	line-height: normal;
+    color: #7ae000;
+    text-align: center;
+    font-family: Inter-I;
+    font-weight: 700;
+    line-height: normal;
 }
 .rem15 {
-	font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 .rem25 {
-	font-size: 2.5rem;
+    font-size: 2.5rem;
 }
 .rem3 {
-	font-size: 3rem;
+    font-size: 3rem;
 }
 .rem4 {
-	font-size: 4rem;
+    font-size: 4rem;
 }
 .input-form {
-	width: 16rem;
-	height: 3rem;
-	padding: 1.25rem 0px 5px 1.875rem;
+    width: 16rem;
+    height: 3rem;
+    padding: 1.25rem 0px 1.25rem 1.875rem;
 
-	border-radius: 1.875rem;
-	border: 10px solid #7ae000;
-	background: #bfe88e;
+    border-radius: 1.875rem;
+    border: 10px solid #7ae000;
+    background: #bfe88e;
+
+    color: #1f1f1f;
+    font-family: Inter;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: normal;
+
+    &:focus-visible {
+        outline: none;
+    }
 }
 .input-form::placeholder {
-	color: #575757;
-	font-family: Inter;
-	font-size: 2.5rem;
-	font-weight: 700;
-	line-height: normal;
+    color: #575757;
+    font-family: Inter;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: normal;
 }
 .submit-form {
-	padding: 0.625rem 1.875rem 1rem 1.875rem;
+    padding: 0.625rem 1.875rem 1rem 1.875rem;
 
-	border-radius: 1.875rem;
-	border: 10px solid #6aac1b;
-	background: #7ae000;
+    border-radius: 1.875rem;
+    border: 10px solid #6aac1b;
+    background: #7ae000;
 
-	color: #1e1e1e !important;
-	font-family: Inter;
+    color: #1e1e1e !important;
+    font-family: Inter;
 }
 
 .ScrollBTN {
-	position: fixed;
-	bottom: 0;
-	right: 0;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 }
 // #backgroundMusic {
 // 	display: none;

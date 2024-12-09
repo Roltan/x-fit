@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Inter-I;
   src: url(../font/Inter/Inter-Italic.otf);
@@ -7,7 +8,7 @@
   src: url(../font/Inter/Inter-Regular.otf);
 }
 html {
-  width: 100vh;
+  width: 100vw;
   font-size: 16px;
 }
 @media (max-width: 450px) {
@@ -58,10 +59,18 @@ a {
 .input-form {
   width: 16rem;
   height: 3rem;
-  padding: 1.25rem 0px 5px 1.875rem;
+  padding: 1.25rem 0px 1.25rem 1.875rem;
   border-radius: 1.875rem;
   border: 10px solid #7ae000;
   background: #bfe88e;
+  color: #1f1f1f;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.input-form:focus-visible {
+  outline: none;
 }
 
 .input-form::-moz-placeholder {
@@ -650,4 +659,111 @@ footer > .app-links > img {
   footer .app-links img {
     width: 100%;
   }
+}
+
+.modalka {
+  display: none;
+  z-index: 30;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1882352941);
+}
+.modalka > *:not(.modalka--wrapper) {
+  max-width: 720px;
+  width: 100%;
+  max-height: 100vh;
+}
+.modalka form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px 60px;
+  border-radius: 35px;
+  background: #1f1f1f;
+}
+.modalka form > h1 {
+  font-family: Inter;
+  width: 100%;
+  text-align: center;
+  color: #7ae000;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.modalka form .input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.modalka form .input > label {
+  font-family: Inter;
+  font-size: 1.5rem;
+  color: #7ae000;
+}
+.modalka form .input-form {
+  font-family: Inter;
+  width: 100%;
+  height: 70px;
+  box-sizing: border-box;
+}
+.modalka form .input-form:focus-visible {
+  outline: none;
+}
+.modalka form .input__checkbox {
+  display: flex;
+  flex-direction: row;
+}
+.modalka form button {
+  margin-top: 5px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.modalka input[type=checkbox]:not(.toggle) {
+  display: none;
+}
+.modalka input[type=checkbox]:not(.toggle) + label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.25rem;
+}
+.modalka input[type=checkbox]:not(.toggle) + label::before {
+  content: "";
+  box-sizing: border-box;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: #bfe88e;
+  border-radius: 5px;
+}
+.modalka input[type=checkbox]:not(.toggle):checked + label::before {
+  border: solid #bfe88e 5px;
+}
+.modalka input[type=checkbox]:not(.toggle):checked + label::after {
+  content: "";
+  box-sizing: border-box;
+  background-color: #7ae000;
+  width: 32px;
+  height: 32px;
+  background-image: url("/img/checked.png");
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 72px- 32px/2;
+  left: 4px;
+  border-radius: 5px;
+}
+
+body.modalka-open {
+  overflow: hidden; /* Блокируем прокрутку страницы */
 }/*# sourceMappingURL=main.css.map */

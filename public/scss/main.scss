@@ -7,3 +7,124 @@
 @import "_ad.scss";
 @import "_application.scss";
 @import "_footer.scss";
+
+.modalka {
+    display: none;
+    z-index: 30;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #00000030;
+
+    & > *:not(.modalka--wrapper) {
+        max-width: 720px;
+        width: 100%;
+        max-height: 100vh;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 30px 60px;
+        border-radius: 35px;
+        background: #1f1f1f;
+
+        & > h1 {
+            font-family: Inter;
+            width: 100%;
+            text-align: center;
+            color: #7ae000;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .input {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            > label {
+                font-family: Inter;
+                font-size: 1.5rem;
+                color: #7ae000;
+            }
+
+            &-form {
+                font-family: Inter;
+                width: 100%;
+                height: 70px;
+                box-sizing: border-box;
+
+                &:focus-visible {
+                    outline: none;
+                }
+            }
+
+            &__checkbox {
+                display: flex;
+                flex-direction: row;
+            }
+        }
+
+        button {
+            margin-top: 5px;
+            padding: 5px 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    input[type="checkbox"]:not(.toggle) {
+        display: none;
+
+        & + label {
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.25rem;
+        }
+        & + label::before {
+            content: "";
+            box-sizing: border-box;
+            min-width: 40px;
+            min-height: 40px;
+            background-color: #bfe88e;
+            border-radius: 5px;
+        }
+        &:checked + label::before {
+            border: solid #bfe88e 5px;
+        }
+        &:checked + label::after {
+            content: "";
+            box-sizing: border-box;
+            background-color: #7ae000;
+            $whiteBox: 32px;
+            width: $whiteBox;
+            height: $whiteBox;
+            background-image: url("/img/checked.png"); // Путь к картинке галочки
+            background-size: auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: (72px-$whiteBox)/2; // Позиционирование картинки внутри квадрата
+            left: (40px - $whiteBox)/2; // Позиционирование картинки внутри квадрата
+            border-radius: 5px;
+        }
+    }
+}
+body.modalka-open {
+    overflow: hidden; /* Блокируем прокрутку страницы */
+}
