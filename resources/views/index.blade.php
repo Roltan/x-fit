@@ -18,10 +18,11 @@
 				<a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
 				<a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
 				<a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
-                <div class="header--buttons">
+				<a class="Inter-text rem15" href="/lk">ЛИЧНЫЙ КАБИНЕТ</a>
+                {{-- <div class="header--buttons">
 					<button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
 					<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
-				</div>
+				</div> --}}
 			</nav>
 			<div class="buter" id="buter" onclick="HeaderAct()">
 				<span></span>
@@ -36,6 +37,7 @@
 				<a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
 				<a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
 				<span class="Inter-text rem15">+7 (383) 312 07 43</span>
+				{{-- <a class="Inter-text rem15" href="/lk">ЛИЧНЫЙ КАБИНЕТ</a> --}}
 			</div>
 		</header>
 

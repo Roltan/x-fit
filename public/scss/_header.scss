@@ -35,15 +35,6 @@ header {
         flex-direction: row;
         gap: 30px;
     }
-    .openModalBtn {
-        box-sizing: border-box;
-        border-radius: 1rem;
-        border: 5px solid #6aac1b;
-        background: #7ae000;
-
-        color: #1e1e1e !important;
-        font-family: Inter;
-    }
 
     @media (max-width: 450px) {
         > nav a,
@@ -97,4 +88,14 @@ header {
             right: 0;
         }
     }
+}
+
+.openModalBtn {
+    box-sizing: border-box;
+    border-radius: 1rem;
+    border: 5px solid #6aac1b;
+    background: #7ae000;
+
+    color: #1e1e1e !important;
+    font-family: Inter;
 }

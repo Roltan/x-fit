@@ -137,14 +137,6 @@ header .header--buttons {
   flex-direction: row;
   gap: 30px;
 }
-header .openModalBtn {
-  box-sizing: border-box;
-  border-radius: 1rem;
-  border: 5px solid #6aac1b;
-  background: #7ae000;
-  color: #1e1e1e !important;
-  font-family: Inter;
-}
 @media (max-width: 450px) {
   header > nav a,
   header > span,
@@ -192,6 +184,15 @@ header .openModalBtn {
   header .navMabail.act {
     right: 0;
   }
+}
+
+.openModalBtn {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 5px solid #6aac1b;
+  background: #7ae000;
+  color: #1e1e1e !important;
+  font-family: Inter;
 }
 
 .baner {

@@ -1,0 +1,265 @@
+@font-face {
+  font-family: Inter-I;
+  src: url(../font/Inter/Inter-Italic.otf);
+}
+@font-face {
+  font-family: Inter;
+  src: url(../font/Inter/Inter-Regular.otf);
+}
+html {
+  font-size: 16px;
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 10px;
+  }
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  background: #2a2a2a;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.Inter-text {
+  color: #7ae000;
+  text-align: center;
+  font-family: Inter-I;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rem15 {
+  font-size: 1.5rem;
+}
+
+.rem25 {
+  font-size: 2.5rem;
+}
+
+.rem3 {
+  font-size: 3rem;
+}
+
+.rem4 {
+  font-size: 4rem;
+}
+
+.input-form {
+  width: 16rem;
+  height: 3rem;
+  padding: 1.25rem 0px 1.25rem 1.875rem;
+  border-radius: 1.875rem;
+  border: 10px solid #7ae000;
+  background: #bfe88e;
+  color: #1f1f1f;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+.input-form:focus-visible {
+  outline: none;
+}
+
+.input-form::-moz-placeholder {
+  color: #575757;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.input-form::placeholder {
+  color: #575757;
+  font-family: Inter;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.submit-form {
+  padding: 0.625rem 1.875rem 1rem 1.875rem;
+  border-radius: 1.875rem;
+  border: 10px solid #6aac1b;
+  background: #7ae000;
+  color: #1e1e1e !important;
+  font-family: Inter;
+}
+
+.ScrollBTN {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+header {
+  border-bottom: 1px solid #7ae000;
+  background: #1f1f1f;
+  box-shadow: 0px 6px 8px 0px rgba(0, 0, 0, 0.25);
+  height: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+header > nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+header > nav a:hover {
+  color: #98f22a;
+}
+header > nav a:active {
+  color: #71ab2b;
+}
+header .buter > span {
+  opacity: 100;
+  transition: 0.4s;
+}
+header .navMabail {
+  display: none;
+  transition: 0.6s;
+}
+header .header--buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+@media (max-width: 450px) {
+  header > nav a,
+  header > span,
+  header .header--buttons {
+    display: none;
+  }
+  header .buter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+  header .buter span {
+    height: 10px;
+    width: 60px;
+    border-radius: 5px;
+    background-color: #7ae000;
+  }
+  header .buter.act > span:nth-child(1) {
+    transform: translateY(150%) rotate(45deg);
+    width: 60px;
+  }
+  header .buter.act > span:nth-child(2) {
+    background-color: #1f1f1f;
+  }
+  header .buter.act > span:nth-child(3) {
+    transform: translateY(-150%) rotate(-45deg);
+    width: 60px;
+  }
+  header .navMabail {
+    top: 150px;
+    right: -500px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    position: absolute;
+    width: 97vw;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: #1f1f1f;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+  header .navMabail.act {
+    right: 0;
+  }
+}
+
+.openModalBtn {
+  box-sizing: border-box;
+  border-radius: 1rem;
+  border: 5px solid #6aac1b;
+  background: #7ae000;
+  color: #1e1e1e !important;
+  font-family: Inter;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+.mini-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.profile-info,
+.edit-profile {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.profile-info p,
+.edit-profile p {
+  color: #7ae000;
+  font-size: 1.5rem;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.input > label {
+  font-family: Inter;
+  font-size: 1rem;
+  color: #7ae000;
+}
+.input-form {
+  font-family: Inter;
+  width: 100%;
+  height: 20px;
+  box-sizing: border-box;
+  border-radius: 1.5rem;
+  padding-left: 1rem;
+}
+.input-form:focus-visible {
+  outline: none;
+}
+.input__checkbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.edit-buttons button {
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}/*# sourceMappingURL=lk.css.map */

@@ -1,0 +1,78 @@
+@import "_base.scss";
+@import "_header.scss";
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+.mini-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    background-color: #1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.profile-info,
+.edit-profile {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    p {
+        color: #7ae000;
+        font-size: 1.5rem;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    > label {
+        font-family: Inter;
+        font-size: 1rem;
+        color: #7ae000;
+    }
+
+    &-form {
+        font-family: Inter;
+        width: 100%;
+        height: 20px;
+        box-sizing: border-box;
+        border-radius: 1.5rem;
+        padding-left: 1rem;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    &__checkbox {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+.edit-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    button {
+        width: 100%;
+    }
+}
+
+.hidden {
+    display: none;
+}
