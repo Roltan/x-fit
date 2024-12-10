@@ -41,24 +41,24 @@
                 <p><strong>Email:</strong> ivan@example.com</p>
                 <p><strong>Телефон:</strong> +7 123 456-78-90</p>
             </div>
-            <div class="edit-profile hidden">
+            <form class="edit-profile hidden" method="POST" action="/">
                 <div class="input">
-					<label for="email_login">Почта</label>
-					<input type="email" name="email" id="email_login" class="input-form" />
+					<label for="name_login">Имя</label>
+					<input type="text" name="name" id="name_login" class="input-form" />
 				</div>
                 <div class="input">
 					<label for="email_login">Почта</label>
 					<input type="email" name="email" id="email_login" class="input-form" />
 				</div>
                 <div class="input">
-					<label for="email_login">Почта</label>
-					<input type="email" name="email" id="email_login" class="input-form" />
+					<label for="phone_login">Почта</label>
+					<input type="text" name="phone" id="phone_login" class="input-form" />
 				</div>
                 <div class="edit-buttons">
-                    <button type="button" id="saveProfile" class="rem15 openModalBtn">Сохранить</button>
+                    <button type="submit" id="saveProfile" class="rem15 openModalBtn">Сохранить</button>
                     <button type="button" id="cancelEdit" class="cancel rem15 openModalBtn">Отмена</button>
                 </div>
-            </div>
+            </form>
             <button type="button" id="editProfile" class="rem15 openModalBtn">Редактировать профиль</button>
         </div>
     </section>

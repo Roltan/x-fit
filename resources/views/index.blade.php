@@ -4,10 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="css/main.css" />
-		<script src="/js/slaider.js" defer></script>
-		<script src="/js/scroll.js" defer></script>
-		<script src="/js/header.js" defer></script>
+		<script defer src="/js/slaider.js"></script>
+		<script defer src="/js/scroll.js"></script>
+		<script defer src="/js/header.js"></script>
         <script defer src="/js/modal.js"></script>
+        <script defer src="/js/register.js"></script>
 		<title>Xfit</title>
 	</head>
 	<body>
@@ -18,11 +19,14 @@
 				<a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
 				<a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
 				<a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
-				<a class="Inter-text rem15" href="/lk">ЛИЧНЫЙ КАБИНЕТ</a>
-                {{-- <div class="header--buttons">
-					<button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
-					<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
-				</div> --}}
+                @if (Auth::check())
+                    <a class="Inter-text rem15" href="/lk">ЛИЧНЫЙ КАБИНЕТ</a>
+                @else
+                    <div class="header--buttons">
+    					<button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
+	    				<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
+		    		</div>
+                @endif
 			</nav>
 			<div class="buter" id="buter" onclick="HeaderAct()">
 				<span></span>
@@ -30,14 +34,17 @@
 				<span></span>
 			</div>
 			<div class="navMabail" id="navMabail">
-                <button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
-				<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
+                @if (Auth::check())
+                    <a class="Inter-text rem15" href="/lk">ЛИЧНЫЙ КАБИНЕТ</a>
+                @else
+    			    <button class="rem15 openModalBtn" data-modal="modal1">Вход</button>
+	    			<button class="rem15 openModalBtn" data-modal="modal2">Регистрация</button>
+                @endif
 				<a class="Inter-text rem15" onclick="Scroll('info-container')">О СТУДИИ</a>
 				<a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
 				<a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
 				<a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
 				<span class="Inter-text rem15">+7 (383) 312 07 43</span>
-				{{-- <a class="Inter-text rem15" href="/lk">ЛИЧНЫЙ КАБИНЕТ</a> --}}
 			</div>
 		</header>
 
