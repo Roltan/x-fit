@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="/css/main.css" />
 		<script defer src="/js/slaider.js"></script>
 		<script defer src="/js/scroll.js"></script>
 		<script defer src="/js/header.js"></script>
         <script defer src="/js/modal.js"></script>
         <script defer src="/js/register.js"></script>
+        <script defer src="/js/login.js"></script>
 		<title>Xfit</title>
 	</head>
 	<body>
@@ -57,7 +58,7 @@
 				</div>
 				<div class="input">
 					<label for="password_login">Пароль</label>
-					<input type="password" name="email" id="password_login" class="input-form" />
+					<input type="password" name="password" id="password_login" class="input-form" />
 				</div>
 				<button type="submit" class="submit-form rem25 Inter-text">Войти</button>
 			</form>
