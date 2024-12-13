@@ -39,17 +39,17 @@
         <div class="mini-container">
             <h2 class="Inter-text">Профиль</h2>
             <div class="profile-info">
-                <p><strong>Имя:</strong> Иван Иванов</p>
-                <p><strong>Email:</strong> ivan@example.com</p>
+                <p><strong>Имя:</strong> {{$user->name}}</p>
+                <p><strong>Email:</strong> {{$user->email}}</p>
             </div>
-            <form class="edit-profile hidden" method="POST" action="/">
+            <form class="edit-profile hidden">
                 <div class="input">
-					<label for="name_login">Имя</label>
-					<input type="text" name="name" id="name_login" class="input-form" />
+					<label for="name">Имя</label>
+					<input type="text" name="name" id="name" class="input-form" value="{{$user->name}}"/>
 				</div>
                 <div class="input">
-					<label for="email_login">Почта</label>
-					<input type="email" name="email" id="email_login" class="input-form" />
+					<label for="email">Почта</label>
+					<input type="email" name="email" id="email" class="input-form" value="{{$user->email}}"/>
 				</div>
                 <div class="edit-buttons">
                     <button type="submit" id="saveProfile" class="rem15 openModalBtn">Сохранить</button>

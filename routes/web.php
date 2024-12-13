@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/lk', function () {
-    return view('lk');
-});
+Route::get('/lk', [ViewController::class, 'personal']);
