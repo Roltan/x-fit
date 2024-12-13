@@ -2,9 +2,6 @@ document.getElementById("editProfile").addEventListener("click", function () {
     document.getElementById("editProfile").classList.add("hidden");
     document.querySelector(".profile-info").classList.add("hidden");
     document.querySelector(".edit-profile").classList.remove("hidden");
-    document.getElementById("editName").value = "Иван Иванов";
-    document.getElementById("editEmail").value = "ivan@example.com";
-    document.getElementById("editPhone").value = "+7 (123) 456-78-90";
 });
 
 document.getElementById("cancelEdit").addEventListener("click", function () {
@@ -13,24 +10,31 @@ document.getElementById("cancelEdit").addEventListener("click", function () {
     document.querySelector(".edit-profile").classList.add("hidden");
 });
 
-document.getElementById("saveProfile").addEventListener("click", function () {
-    const newName = document.getElementById("editName").value;
-    const newEmail = document.getElementById("editEmail").value;
-    const newPhone = document.getElementById("editPhone").value;
+document
+    .getElementById("edit")
+    .addEventListener("submit", async function (event) {
+        event.preventDefault(); // Предотвращаем стандартное поведение формы
 
-    document.querySelector(
-        ".profile-info p:nth-child(1)"
-    ).textContent = `Имя: ${newName}`;
+        // Собираем данные формы
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData.entries());
 
-    document.querySelector(
-        ".profile-info p:nth-child(2)"
-    ).textContent = `Email: ${newEmail}`;
+        // Отправляем запрос на сервер
+        const response = await fetch("/api/edit", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(data),
+        });
 
-    document.querySelector(
-        ".profile-info p:nth-child(3)"
-    ).textContent = `Телефон: ${newPhone}`;
+        const result = await response.json();
 
-    document.getElementById("editProfile").classList.remove("hidden");
-    document.querySelector(".profile-info").classList.remove("hidden");
-    document.querySelector(".edit-profile").classList.add("hidden");
-});
+        if (result.status == true) {
+            // Успешная отправка
+            window.location.reload();
+        } else {
+            // Обрабатываем ошибки валидации
+            alert(result.message);
+        }
+    });

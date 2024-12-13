@@ -42,7 +42,7 @@
                 <p><strong>Имя:</strong> {{$user->name}}</p>
                 <p><strong>Email:</strong> {{$user->email}}</p>
             </div>
-            <form class="edit-profile hidden">
+            <form class="edit-profile hidden" id="edit">
                 <div class="input">
 					<label for="name">Имя</label>
 					<input type="text" name="name" id="name" class="input-form" value="{{$user->name}}"/>

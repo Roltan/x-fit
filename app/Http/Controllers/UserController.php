@@ -51,4 +51,17 @@ class UserController extends Controller
         Auth::logout();
         return redirect('/');
     }
+
+    public function edit(Request $request): Response
+    {
+        $data = $request->only([
+            'name',
+            'email',
+        ]);
+
+        $user = User::find(Auth::user()->id);
+        $user->update($data);
+
+        return response(['status' => true]);
+    }
 }
