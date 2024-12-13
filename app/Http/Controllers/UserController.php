@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class UserController extends Controller
 {
@@ -37,11 +38,17 @@ class UserController extends Controller
             ->where('email',  $data['email'])
             ->first();
 
-        if ($user == null or Hash::check($data['password'], $user->password))
+        if ($user == null or !Hash::check($data['password'], $user->password))
             return response(['status' => false, 'message' => 'incorrect data'], 404);
 
         Auth::login($user);
 
         return response(['status' => true], 200);
+    }
+
+    public function logout(): RedirectResponse
+    {
+        Auth::logout();
+        return redirect('/');
     }
 }

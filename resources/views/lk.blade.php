@@ -13,11 +13,12 @@
     <header>
         <nav>
             <img class="header-logo" src="/img/X-FIT.png" />
-            <a class="Inter-text rem15" onclick="Scroll('info-container')">О СТУДИИ</a>
-            <a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
-            <a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
-            <a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
+            <a class="Inter-text rem15" href="/#info-container">О СТУДИИ</a>
+            <a class="Inter-text rem15" href="/#boy-card">КАРТЫ</a>
+            <a class="Inter-text rem15" href="/#ad">ВАША ПОЛЬЗА</a>
+            <a class="Inter-text rem15" href="/#application">ЗАЯВКА</a>
             <span class="Inter-text rem15">+7 (383) 312 07 43</span>
+            <a class="Inter-text rem15" href="/api/logout">Выйти</a>
         </nav>
         <div class="buter" id="buter" onclick="HeaderAct()">
             <span></span>
@@ -25,11 +26,12 @@
             <span></span>
         </div>
         <div class="navMabail" id="navMabail">
-            <a class="Inter-text rem15" onclick="Scroll('info-container')">О СТУДИИ</a>
-            <a class="Inter-text rem15" onclick="Scroll('boy-card')">КАРТЫ</a>
-            <a class="Inter-text rem15" onclick="Scroll('ad')">ВАША ПОЛЬЗА</a>
-            <a class="Inter-text rem15" onclick="Scroll('application')">ЗАЯВКА</a>
+            <a class="Inter-text rem15" href="/#info-container">О СТУДИИ</a>
+            <a class="Inter-text rem15" href="/#boy-card">КАРТЫ</a>
+            <a class="Inter-text rem15" href="/#ad">ВАША ПОЛЬЗА</a>
+            <a class="Inter-text rem15" href="/#application">ЗАЯВКА</a>
             <span class="Inter-text rem15">+7 (383) 312 07 43</span>
+            <a class="Inter-text rem15" href="/api/logout">Выйти</a>
         </div>
     </header>
 
@@ -39,7 +41,6 @@
             <div class="profile-info">
                 <p><strong>Имя:</strong> Иван Иванов</p>
                 <p><strong>Email:</strong> ivan@example.com</p>
-                <p><strong>Телефон:</strong> +7 123 456-78-90</p>
             </div>
             <form class="edit-profile hidden" method="POST" action="/">
                 <div class="input">
@@ -49,10 +50,6 @@
                 <div class="input">
 					<label for="email_login">Почта</label>
 					<input type="email" name="email" id="email_login" class="input-form" />
-				</div>
-                <div class="input">
-					<label for="phone_login">Почта</label>
-					<input type="text" name="phone" id="phone_login" class="input-form" />
 				</div>
                 <div class="edit-buttons">
                     <button type="submit" id="saveProfile" class="rem15 openModalBtn">Сохранить</button>
