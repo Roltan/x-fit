@@ -95,12 +95,6 @@ a {
   font-family: Inter;
 }
 
-.ScrollBTN {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
-
 header {
   border-bottom: 1px solid #7ae000;
   background: #1f1f1f;

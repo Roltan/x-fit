@@ -94,6 +94,33 @@
 				<button type="submit" class="submit-form rem25 Inter-text">Зарегистрироваться</button>
 			</form>
 		</div>
+		<div class="modalka modalka--wrapper" id="modal3">
+			<form class="form">
+				<h1>Форма обратной связи</h1>
+				<div class="input">
+					<label for="name">Имя</label>
+					<input type="text" name="name" id="name" class="input-form" />
+				</div>
+				<div class="input">
+					<label for="email_reg">Почта</label>
+					<input type="email" name="email" id="email_reg" class="input-form" />
+				</div>
+				<div class="input">
+					<label for="password_reg">Заявка</label>
+					<textarea name="text" class="input-form"></textarea>
+				</div>
+				<div class="input input__checkbox">
+					<input type="checkbox" name="rule" id="rule" />
+					<label for="rule">
+						<span>
+							Я соглашаюсь на обработку
+							<a href="#">персональных данных</a>
+						</span>
+					</label>
+				</div>
+				<button type="submit" class="submit-form rem25 Inter-text">Оставить заявку</button>
+			</form>
+		</div>
 
 		<section class="baner">
 			<span class="title-baner Inter-text rem4"> До конца года фитнес на наш счет! </span>
@@ -307,5 +334,14 @@
 				<img src="/img/google-play.jpg" alt="" />
 			</div>
 		</footer>
+
+        <section class="footer__fixed">
+            <button class="feedback-button submit-form openModalBtn" data-modal="modal3">
+                <img src="/img/chat.png" alt="Оставить отзыв" />
+            </button>
+            <button id="scrollToTopButton" onclick="ScrollToTop()" class="ScrollBTN submit-form openModalBtn">
+                <img src="/img/up.png" alt="">
+            </button>
+        </section>
 	</body>
 </html>
