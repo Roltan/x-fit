@@ -98,20 +98,20 @@
 			<form class="form">
 				<h1>Форма обратной связи</h1>
 				<div class="input">
-					<label for="name">Имя</label>
-					<input type="text" name="name" id="name" class="input-form" required />
+					<label for="name_order">Имя</label>
+					<input type="text" name="name" id="name_order" class="input-form" required />
 				</div>
 				<div class="input">
 					<label for="email_reg">Почта</label>
-					<input type="email" name="email" id="email_reg" class="input-form" required />
+					<input type="email" name="email" id="email_order" class="input-form" required />
 				</div>
 				<div class="input">
-					<label for="password_reg">Заявка</label>
-					<textarea name="text" class="input-form" required></textarea>
+					<label for="order-text">Заявка</label>
+					<textarea name="text" class="input-form" id="order-text" required></textarea>
 				</div>
 				<div class="input input__checkbox">
-					<input type="checkbox" name="rule" id="request-rule" required />
-					<label for="request-rule">
+					<input type="checkbox" name="rule" id="order-rule" required />
+					<label for="order-rule">
 						<span>
 							Я соглашаюсь на обработку
 							<a href="#">персональных данных</a>
