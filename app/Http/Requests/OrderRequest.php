@@ -23,7 +23,7 @@ class OrderRequest extends FormRequest
     {
         return [
             'name' => ['required', 'string', 'filled', 'min:1'],
-            'email' => ['request', 'email'],
+            'email' => ['required', 'email'],
             'text' => ['required', 'string', 'filled', 'min:1']
         ];
     }

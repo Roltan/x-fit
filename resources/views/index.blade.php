@@ -9,6 +9,7 @@
 		<script defer src="/js/header.js"></script>
         <script defer src="/js/modal.js"></script>
         <script defer src="/js/register.js"></script>
+        <script defer src="/js/order.js"></script>
         <script defer src="/js/login.js"></script>
 		<title>Xfit</title>
 	</head>
@@ -95,7 +96,7 @@
 			</form>
 		</div>
 		<div class="modalka modalka--wrapper" id="modal3">
-			<form class="form">
+			<form class="form" id="order">
 				<h1>Форма обратной связи</h1>
 				<div class="input">
 					<label for="name_order">Имя</label>
