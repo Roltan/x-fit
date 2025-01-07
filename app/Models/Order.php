@@ -12,6 +12,7 @@ class Order extends Model
     public $fillable = [
         'name',
         'email',
-        'text'
+        'text',
+        'is_complied'
     ];
 }

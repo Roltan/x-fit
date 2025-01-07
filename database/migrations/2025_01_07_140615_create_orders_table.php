@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->text('text');
+            $table->boolean('is_complied')->default(false);
             $table->timestamps();
         });
     }
