@@ -99,19 +99,19 @@
 				<h1>Форма обратной связи</h1>
 				<div class="input">
 					<label for="name">Имя</label>
-					<input type="text" name="name" id="name" class="input-form" />
+					<input type="text" name="name" id="name" class="input-form" required />
 				</div>
 				<div class="input">
 					<label for="email_reg">Почта</label>
-					<input type="email" name="email" id="email_reg" class="input-form" />
+					<input type="email" name="email" id="email_reg" class="input-form" required />
 				</div>
 				<div class="input">
 					<label for="password_reg">Заявка</label>
-					<textarea name="text" class="input-form"></textarea>
+					<textarea name="text" class="input-form" required></textarea>
 				</div>
 				<div class="input input__checkbox">
-					<input type="checkbox" name="rule" id="rule" />
-					<label for="rule">
+					<input type="checkbox" name="rule" id="request-rule" required />
+					<label for="request-rule">
 						<span>
 							Я соглашаюсь на обработку
 							<a href="#">персональных данных</a>
