@@ -10,11 +10,7 @@ class OrderController extends Controller
 {
     public function newOrder(OrderRequest $request): Response
     {
-        $data = $request->only([
-            'name',
-            'email',
-            'text'
-        ]);
+        $data = $request->only(['name', 'email', 'text']);
         Order::create($data);
 
         return response(['status' => true], 200);

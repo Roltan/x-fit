@@ -8,9 +8,6 @@ use Illuminate\Support\Facades\DB;
 
 class SliderSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         DB::table('sliders')->insert([

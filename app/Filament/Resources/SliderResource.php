@@ -61,7 +61,8 @@ class SliderResource extends Resource
         return $table
             ->columns([
                 ToggleColumn::make('vis')
-                    ->label('Активен'),
+                    ->label('Активен')
+                    ->sortable(),
                 TextColumn::make('title')
                     ->label('Заголовок'),
                 TextColumn::make('text')
@@ -69,6 +70,7 @@ class SliderResource extends Resource
                     ->limit(50),
                 TextColumn::make('sort')
                     ->label('Важность')
+                    ->sortable()
             ])
             ->filters([
                 //

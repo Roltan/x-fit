@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\RedirectResponse;
 
 class ViewController extends Controller
 {
-    public function index()
+    public function index(): View
     {
         $slider = Slider::query()
             ->where('vis', true)

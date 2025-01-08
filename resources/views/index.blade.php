@@ -305,7 +305,7 @@
 
         <section class="footer__fixed">
             <button class="feedback-button submit-form openModalBtn" data-modal="modal3">
-                <img src="/img/chat.png" alt="Оставить отзыв" />
+                <img src="/img/chat.png" alt="Оставить заявку" />
             </button>
             <button id="scrollToTopButton" onclick="ScrollToTop()" class="ScrollBTN submit-form openModalBtn">
                 <img src="/img/up.png" alt="">
