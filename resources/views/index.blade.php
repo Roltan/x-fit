@@ -151,48 +151,15 @@
 		<section class="slaider-box">
 			<div class="slaider">
 				<div class="slaider-img">
-					<div class="slaider-item">
-						<img src="/img/тренажерный зал.jpg" />
-						<div class="disc">
-							<span class="Inter-text rem15" style="text-align: left">Самые современные тренажеры LIFE FITNESS и HAMMER STRENGTH: беговые дорожки, силовые тренажеры для всех групп мышц.</span>
-							<span class="Inter-text rem3" style="text-align: right">ТРЕНАЖЕРНЫЙ ЗАЛ</span>
-						</div>
-					</div>
-					<div class="slaider-item">
-						<img src="/img/бассейн с морской водой.jpg" alt="" />
-						<div class="disc">
-							<span class="Inter-text rem15" style="text-align: left">Бассейн 25 метров. Детский бассейн. Аквааэробика, классическое плавание, реабилитационные курсы.</span>
-							<span class="Inter-text rem3" style="text-align: right">БАССЕЙН С МОРСКОЙ ВОДОЙ</span>
-						</div>
-					</div>
-					<div class="slaider-item">
-						<img src="/img/детский фитнес.jpg" alt="" />
-						<div class="disc">
-							<span class="Inter-text rem15" style="text-align: left">Плавание, спортивные игры, соревнования, персональные тренировки и групповые занятия премиум-класса.</span>
-							<span class="Inter-text rem3" style="text-align: right">ДЕТСКИЙ ФИТНЕС</span>
-						</div>
-					</div>
-					<div class="slaider-item">
-						<img src="/img/салон красоты spa.jpg" alt="" />
-						<div class="disc">
-							<span class="Inter-text rem15" style="text-align: left">Большой выбор программ, косметический и спортивный массаж, салон красоты и солярий.</span>
-							<span class="Inter-text rem3" style="text-align: right">САЛОН КРАСОТЫ & SPA</span>
-						</div>
-					</div>
-					<div class="slaider-item">
-						<img src="/img/фитнес-бар.jpg" alt="" />
-						<div class="disc">
-							<span class="Inter-text rem15" style="text-align: left">Возможность подкрепиться и сохранить эффект от тренировок. Питание для здорового образа жизни!</span>
-							<span class="Inter-text rem3" style="text-align: right">ФИТНЕС-БАР FRESH-FIT</span>
-						</div>
-					</div>
-					<div class="slaider-item">
-						<img src="/img/функциональный тренинг.jpeg" alt="" />
-						<div class="disc">
-							<span class="Inter-text rem15" style="text-align: left">Вы сможете действительно быстро скинуть лишний вес, увеличить или повысить эластичность мышечной массы.</span>
-							<span class="Inter-text rem3" style="text-align: right">ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ</span>
-						</div>
-					</div>
+                    @foreach ($slider as $slide)
+                        <div class="slaider-item">
+                            <img src="/{{$slide->img}}" />
+                            <div class="disc">
+                                <span class="Inter-text rem15" style="text-align: left">{{$slide->text}}</span>
+                                <span class="Inter-text rem3" style="text-align: right">{{$slide->title}}</span>
+                            </div>
+                        </div>
+                    @endforeach
 				</div>
 				<div class="slaider-btn">
 					<img src="/img/prev.svg" onclick="Prev()" />

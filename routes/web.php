@@ -14,8 +14,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [ViewController::class, 'index']);
 
 Route::get('/lk', [ViewController::class, 'personal']);
